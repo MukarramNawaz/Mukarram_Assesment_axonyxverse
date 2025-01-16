@@ -88,7 +88,7 @@ function App() {
           hideProgressBar={true}
           closeOnClick
         />
-        <main className="mx-auto p-8 ml-20 rounded-2xl">
+        <main className="mx-auto p-8 ml-24 rounded-2xl">
           <h1 className="text-4xl text-[#444753] font-bold mb-8">Settings</h1>
 
           <div className="flex gap-8">

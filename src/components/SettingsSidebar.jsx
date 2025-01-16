@@ -4,7 +4,7 @@ const menuItems = ['General', 'Password', 'Price', 'Treatments'];
 
 export default function SettingsSidebar({ activeItem, onItemClick }) {
   return (
-    <div className="w-64 bg-[#F3F6FF] rounded-lg p-2 h-full">
+    <div className="w-64 bg-[#F3F6FF] rounded-lg p-2 h-full mr-10">
       {menuItems.map((item) => (
         <button
           key={item}

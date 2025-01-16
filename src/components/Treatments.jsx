@@ -95,7 +95,7 @@ export default function Treatments() {
               key={category}
               className={`w-full text-left px-4 py-3 rounded-md text-base font-medium transition-colors ${
                 selectedCategory === category
-                  ? "bg-[#F2F5FF] text-primary"
+                  ? "bg-[#F2F5FF] text-primary font-semibold"
                   : "text-[#71788E] hover:bg-gray-50"
               }`}
               onClick={() => setSelectedCategory(category)}
@@ -105,7 +105,6 @@ export default function Treatments() {
           ))}
         </div>
 
-        
 
         <div className="flex-1 max-w-3xl bg-[#F9FAFF] rounded-xl pb-4">
           <div className="rounded-lg p-6">
@@ -117,7 +116,7 @@ export default function Treatments() {
               <span className="text-sm text-[#8383A3]">Treatments</span>
             </div>
 
-      {/* they treatment sections/table */}
+      {/* the treatment sections/table */}
            
             <div className="border border-[#E4E4F8]  bg-white rounded-lg mb-6">
               {treatments[selectedCategory]?.map((treatment, index) => (
