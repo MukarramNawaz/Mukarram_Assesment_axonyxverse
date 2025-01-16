@@ -11,7 +11,7 @@ export default function SettingsSidebar({ activeItem, onItemClick }) {
           className={clsx(
             'w-full text-left px-4 py-2 rounded-md text-base font-medium transition-colors',
             activeItem === item
-              ? 'bg-[white] text-primary'
+              ? 'bg-[white] text-primary font-semibold'
               : 'text-[#71788E] hover:bg-gray-50'
           )}
           onClick={() => onItemClick(item)}

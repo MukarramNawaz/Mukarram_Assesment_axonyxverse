@@ -1,10 +1,14 @@
-import { RiDashboardLine, RiMailLine, RiCalendarLine, RiStarLine, RiSettings4Line, RiLogoutBoxLine } from 'react-icons/ri';
-import Logo from '../assets/Logo.png';
+import {RiMailLine, RiSettings4Line, RiLogoutBoxLine } from 'react-icons/ri';
+import { FiLogOut } from "react-icons/fi";
+import { LuCalendarDays } from "react-icons/lu";
+import { MdOutlineReviews } from "react-icons/md";
+import { RxDashboard } from "react-icons/rx";
+
 const navItems = [
-  { icon: RiDashboardLine, label: 'DASHBOARD', count: 0 },
+  { icon: RxDashboard, label: 'DASHBOARD', count: 0 },
   { icon: RiMailLine, label: 'INBOX', count: 2 },
-  { icon: RiCalendarLine, label: 'SCHEDULE', count: 0 },
-  { icon: RiStarLine, label: 'REVIEWS', count: 6 },
+  { icon: LuCalendarDays, label: 'SCHEDULE', count: 0 },
+  { icon: MdOutlineReviews, label: 'REVIEWS', count: 6 },
   { icon: RiSettings4Line, label: 'SETTINGS', count: 0 },
 ];
 
@@ -16,7 +20,7 @@ export default function Sidebar() {
       <nav className="flex-1 flex flex-col gap-6 ">
         {navItems.map((item) => (
           <div key={item.label} className="relative group">
-            <div className={`w-20 h-16 flex flex-col items-center rounded-xl justify-center cursor-pointer hover:text-primary ${item.label === 'SETTINGS' ? 'text-primary bg-white' : 'text-gray-500'}`}>
+            <div className={`w-20 h-16 flex flex-col items-center rounded-xl justify-center cursor-pointer hover:text-primary ${item.label === 'SETTINGS' ? 'text-primary bg-white ' : 'text-gray-500'}`}>
               <item.icon className="w-6 h-6" />
               <span className="text-xs mt-1">{item.label}</span>
               {item.count > 0 && (
@@ -31,7 +35,7 @@ export default function Sidebar() {
 
       <div className="mt-auto cursor-pointer text-gray-500 hover:text-primary">
         <div className="w-20 h-16 flex flex-col items-center justify-center">
-          <RiLogoutBoxLine className="w-6 h-6" />
+          <FiLogOut className="w-6 h-6" />
           <span className="text-xs mt-1">Logout</span>
         </div>
       </div>
